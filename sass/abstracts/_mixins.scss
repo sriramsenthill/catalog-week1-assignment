@@ -1,0 +1,52 @@
+@mixin grid-center {
+    display: grid;
+    place-items: center;
+}
+
+@mixin flex-center($direction) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $direction;
+}
+
+@mixin media-query($breakpoint) {
+    @if $breakpoint ==desktop-large {
+        @media only screen and (min-width: 110em) {
+            // 1760px
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==desktop {
+        @media only screen and (min-width: 90em) {
+            // 1440px
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==tablet {
+        @media only screen and (max-width: 56.25em) {
+            // 900px
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==tablet-small {
+        @media only screen and (max-width: 48em) {
+            // 768px
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==mobile {
+        @media only screen and (max-width: 30em) {
+            // 480px
+            @content;
+        }
+    }
+
+    @else {
+        @warn "No valid breakpoint provided.";
+    }
+}

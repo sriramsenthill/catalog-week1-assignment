@@ -1,0 +1,84 @@
+@use "../abstracts" as abs;
+
+.review {
+
+    &__card {
+        max-width: 37rem;
+        min-height: 43rem;
+        padding: 6.4rem 4rem 4.8rem;
+        background-color: var(--clr-neutral-white);
+        box-shadow: 0px 10px 15px 0px #655a5a40;
+        border-radius: 0.8rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2.8rem;
+    }
+
+    &__rating {
+        display: flex;
+
+        svg {
+            height: 2.4rem;
+            width: 2.4rem;
+        }
+    }
+
+    &__description {
+        font-size: 1.8rem;
+    }
+
+    &__author {
+        margin-top: auto;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        gap: 0 1.4rem;
+
+        &-img {
+            grid-row: span 2;
+            height: 5.6rem;
+            width: 5.6rem;
+            border-radius: 50%;
+        }
+
+        &-name {
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        &-title {
+            font-size: 1.4rem;
+        }
+    }
+
+    &__slider-btns {
+        width: fit-content;
+        margin: 3rem var(--side-padding) 0 auto;
+        display: flex;
+        gap: 2rem;
+
+        button {
+            color: var(--clr-text-500);
+            font-weight: 600;
+            font-size: 2.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+
+            svg {
+                width: 3.6rem;
+                height: 3.6rem;
+                position: relative;
+                top: 1px;
+            }
+        }
+
+        @include abs.media-query(desktop) {
+            margin: 3rem calc(var(--side-padding) + 4rem) 0 auto;
+        }
+
+        @include abs.media-query(mobile) {
+            margin-top: 0rem;
+        }
+    }
+}

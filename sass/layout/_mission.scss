@@ -1,0 +1,18 @@
+@use "../abstracts" as abs;
+@use "../components/mission-section";
+
+
+.mission {
+
+    min-height: 65rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-family: var(--ff-primary);
+    background-color: var(--clr-primary);
+
+    @include abs.media-query(tablet) {
+        grid-template-columns: 1fr;
+        min-height: 60rem;
+    }
+
+}

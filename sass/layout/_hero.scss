@@ -1,0 +1,23 @@
+@use "../abstracts" as abs;
+@use "../components/hero-section";
+
+.hero {
+    min-height: 58rem;
+    background-image: linear-gradient(#6d535780, #6d535780),
+        url(../../assets/images/banner-hero.webp);
+    background-position: center;
+    background-size: cover;
+    padding: 2rem;
+    text-align: center;
+    color: var(--clr-neutral-white);
+    @include abs.grid-center;
+
+    @include abs.media-query(tablet) {
+        background-size: 160%;
+    }
+
+    @include abs.media-query(mobile) {
+        background-size: 350%;
+    }
+
+}

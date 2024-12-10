@@ -1,0 +1,21 @@
+@use "../abstracts" as abs;
+@use "../components/review-section";
+
+.review {
+    padding-bottom: 11rem;
+    margin-top: 1rem;
+
+    @include abs.media-query(mobile) {
+        margin-top: -8rem;
+    }
+
+    // changing global utility styles
+    .slider-wrapper {
+        gap: 3rem;
+
+        @include abs.media-query(mobile) {
+            flex-direction: row;
+        }
+    }
+
+}

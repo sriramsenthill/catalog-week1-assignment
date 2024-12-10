@@ -1,0 +1,25 @@
+@use "../abstracts/mixins" as abs;
+
+:root {
+    --ff-primary: "Mulish", sans-serif;
+    --ff-secondary: "Open Sans", sans-serif;
+
+    --clr-text-100: #bbc8d4;
+    --clr-text-200: #6d7d8b;
+    --clr-text-300: #495c76b2;
+    --clr-text-400: #697694;
+    --clr-text-500: #553d67;
+    --clr-primary: #f64c72;
+    --clr-neutral-white: #ffffff;
+
+    --timing-function: cubic-bezier(0.46, 0.03, 0.52, 0.96);
+    --side-padding: 4.8rem;
+
+    @include abs.media-query(desktop) {
+        --side-padding: 14rem;
+    }
+
+    @include abs.media-query(mobile) {
+        --side-padding: 2.4rem;
+    }
+}

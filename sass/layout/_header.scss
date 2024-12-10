@@ -1,0 +1,15 @@
+@use "../abstracts" as abs;
+@use "../components/header-section";
+
+.header {
+
+    background-color: var(--clr-neutral-white);
+
+    @include abs.media-query(tablet-small) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+}

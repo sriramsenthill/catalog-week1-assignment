@@ -1,0 +1,72 @@
+@use "../abstracts" as abs;
+
+.team {
+
+    &__member-card {
+        max-width: 34rem;
+        background-color: var(--clr-neutral-white);
+        display: grid;
+        box-shadow: 0px 10px 15px 0px #655a5a40;
+        border-radius: 8px;
+
+        &-image {
+            max-height: 25rem;
+            border-radius: 8px 8px 0 0;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-position: left 20%;
+            }
+        }
+
+        &-details {
+            padding: 2.6rem 2rem 4.8rem;
+        }
+
+        &-full-name {
+            font-weight: 600;
+            font-size: 2.4rem;
+            color: var(--clr-text-500);
+        }
+
+        &-position-title {
+            margin: 2px 0 1rem 1px;
+            font-family: var(--ff-primary);
+            font-weight: 600;
+            font-size: 1.4rem;
+            color: var(--clr-text-200);
+        }
+
+        &-biography {
+            color: var(--clr-text-400);
+        }
+    }
+
+    &__slider-button {
+        display: inline-block;
+        margin: 3rem var(--side-padding) 0 auto;
+        color: var(--clr-text-500);
+        font-weight: 600;
+        font-size: 2.2rem;
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+
+        svg {
+            width: 1.8rem;
+            height: 1.8rem;
+            position: relative;
+            top: 1px;
+        }
+
+        @include abs.media-query(desktop) {
+            margin: 3rem calc(var(--side-padding) + 4rem) 0 auto;
+        }
+
+        @include abs.media-query(mobile) {
+            display: none;
+        }
+    }
+
+}

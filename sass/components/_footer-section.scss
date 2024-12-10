@@ -1,0 +1,66 @@
+@use "../abstracts" as abs;
+
+.footer {
+    &__top {
+        padding: 7.2rem var(--side-padding) 8rem;
+        width: 100%;
+        color: var(--clr-neutral-white);
+        text-align: center;
+        background-color: var(--clr-primary);
+        @include abs.flex-center(column);
+        gap: 3rem;
+    }
+
+    &__heading {
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 4.8rem;
+    }
+
+    &__description {
+        font-size: 2rem;
+        max-width: 78rem;
+    }
+
+    &__input {
+        margin-top: 1.2rem;
+    }
+
+    &__bottom {
+        padding: 7.2rem var(--side-padding);
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 2.4rem;
+
+        @include abs.media-query(mobile) {
+            padding-top: 4rem;
+            padding-bottom: 4.8rem;
+            justify-content: center;
+        }
+    }
+
+    &__copyright {
+        font-size: 1.4rem;
+        color: var(--clr-text-500);
+
+        @include abs.media-query(mobile) {
+            text-align: center;
+        }
+    }
+
+    &__socials {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        svg {
+            width: 2.8rem;
+            height: 2.8rem;
+        }
+
+        svg:last-child {
+            scale: 0.9;
+        }
+    }
+}

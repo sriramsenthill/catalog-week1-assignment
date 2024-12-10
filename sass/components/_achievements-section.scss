@@ -1,0 +1,90 @@
+@use "../abstracts" as abs;
+
+.achievements {
+    &__title {
+        font-weight: 700;
+        font-size: 4rem;
+    }
+
+    &__summary {
+        max-width: 68rem;
+        font-size: 1.8rem;
+    }
+
+    &__statistics {
+        margin-top: 1rem;
+        max-width: 82rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5.6rem;
+
+        @include abs.media-query(mobile) {
+            max-width: 70%;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.8rem;
+        }
+    }
+
+    &__statistic {
+        @include abs.grid-center;
+        gap: 0.6rem;
+
+        span:first-child {
+            font-family: var(--ff-primary);
+            font-weight: 700;
+            font-size: 4rem;
+        }
+
+        span:last-child {
+            font-weight: 600;
+            font-size: 1.4rem;
+        }
+    }
+
+    &__benefits {
+        width: 100%;
+        padding: 0 2.4rem;
+        position: absolute;
+        top: 0;
+        transform: translateY(-75%);
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+
+        @include abs.media-query(tablet) {
+            flex-direction: column;
+            align-items: center;
+            transform: translateY(-90%);
+        }
+    }
+
+    &__benefit-card {
+        max-width: 36rem;
+        background-color: var(--clr-neutral-white);
+        padding: 3.6rem 2rem 5.6rem;
+        box-shadow: 0px 10px 15px 0px #06000040;
+    }
+
+    &__benefit-img {
+        @include abs.grid-center;
+
+        svg {
+            height: 7.5rem;
+        }
+    }
+
+    &__benefit-description {
+        h3 {
+            font-size: 2.6rem;
+            color: var(--clr-text-500);
+            margin: 12px 0 10px;
+            white-space: nowrap;
+        }
+
+        p {
+            font-size: 1.8rem;
+            color: var(--clr-text-300);
+        }
+    }
+}

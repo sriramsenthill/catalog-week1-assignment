@@ -1,0 +1,23 @@
+@use "../abstracts" as abs;
+@use "../components/about-section";
+
+.about {
+    max-width: 96rem;
+    margin: -6rem auto 0;
+    padding: 3.6rem 4.8rem 15rem;
+    background-color: var(--clr-neutral-white);
+    box-shadow: 0px 10px 15px 0px #7e616140;
+    @include abs.flex-center(column);
+    gap: 4.8rem;
+
+    @include abs.media-query(tablet) {
+        padding: 3.6rem 2.4rem 13rem;
+        margin-top: 0.4rem;
+    }
+
+    @include abs.media-query(tablet-small) {
+        padding-top: 4.8rem;
+        padding-bottom: 8rem;
+        gap: 5.6rem;
+    }
+}

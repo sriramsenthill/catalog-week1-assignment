@@ -1,0 +1,89 @@
+@use "../abstracts" as abs;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+
+    @include abs.media-query(tablet-small) {
+        font-size: 55%;
+    }
+
+    @include abs.media-query(mobile) {
+        font-size: 52%;
+    }
+}
+
+body {
+    background-color: var(--clr-neutral-white);
+    overflow-x: hidden;
+    font-family: var(--ff-secondary);
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--clr-text-200);
+
+    @include abs.media-query(tablet-small) {
+        margin-top: 10rem;
+    }
+}
+
+body>section {
+    scroll-margin-top: 4rem;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--ff-primary);
+    font-weight: normal;
+    line-height: 1.3;
+}
+
+h2 {
+    @include abs.media-query(mobile) {
+        font-size: 3.5rem !important;
+    }
+}
+
+p {
+    line-height: 1.6;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+button {
+    background-color: transparent;
+    outline: transparent;
+    border: none;
+    font: inherit;
+    color: inherit;
+    line-height: normal;
+    cursor: pointer;
+    transition: 0.3s var(--timing-function);
+}
+
+input {
+    background-color: transparent;
+    outline: transparent;
+    border: none;
+    font: inherit;
+
+    &:focus {
+        outline-color: transparent;
+    }
+}

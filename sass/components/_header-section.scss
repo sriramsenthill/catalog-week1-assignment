@@ -1,0 +1,130 @@
+@use "../abstracts" as abs;
+
+.navigation {
+    $self: &;
+    position: relative;
+    padding: 0.4rem 2rem 3.8rem;
+    @include abs.grid-center;
+    gap: 2.4rem;
+
+    @include abs.media-query(tablet-small) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 2rem 2.4rem;
+    }
+
+    &__brand {
+        @include abs.grid-center;
+        font-family: var(--ff-primary);
+        font-size: 1.8rem;
+        font-weight: 700;
+
+        @include abs.media-query(tablet-small) {
+            font-size: 1.2rem;
+        }
+
+        &-container {
+            position: relative;
+            left: 0.5rem;
+            width: 12rem;
+            height: 12rem;
+
+            @include abs.media-query(tablet-small) {
+                width: 4.8rem;
+                height: 4.8rem;
+                left: 0;
+            }
+        }
+
+        &-text {
+            text-transform: uppercase;
+
+            span:first-child {
+                color: var(--clr-primary);
+            }
+
+            span:last-child {
+                color: var(--clr-text-500);
+            }
+        }
+    }
+
+    &__menu-items {
+        display: flex;
+        gap: 4.8rem;
+        font-family: var(--ff-secondary);
+        font-size: 2rem;
+        color: var(--clr-text-500);
+
+        @include abs.media-query(tablet-small) {
+            position: absolute;
+            flex-direction: column;
+            top: 0;
+            left: 0;
+            min-height: 95vh;
+            min-height: 100dvh;
+            width: 100%;
+            display: none;
+            background-color: var(--clr-neutral-white);
+            padding: 2rem;
+        }
+    }
+
+    &__toggle-menu {
+        position: relative;
+        height: 4rem;
+        width: 4rem;
+        display: none;
+        -webkit-tap-highlight-color: transparent;
+
+        @include abs.media-query(tablet-small) {
+            @include abs.grid-center;
+        }
+
+        span,
+        &::before,
+        &::after {
+            display: inline-block;
+            position: absolute;
+            width: 80%;
+            height: 1.5px;
+            background-color: var(--clr-text-500);
+            border-radius: 2.8rem;
+            transition: var(--timing-function) 0.3s;
+        }
+
+        span {
+            transform: translateY(1rem);
+        }
+
+        &::before {
+            content: "";
+            transform: translateY(-1rem);
+        }
+
+        &::after {
+            content: "";
+        }
+    }
+
+    &--active-toggle {
+        #{ $self }__menu-items {
+            @include abs.flex-center(column);
+        }
+
+        #{ $self }__toggle-menu {
+            span {
+                transform: translateY(0) rotate(-45deg);
+            }
+
+            &::before {
+                transform: translateY(0) rotate(45deg);
+            }
+
+            &::after {
+                opacity: 0;
+            }
+        }
+    }
+}

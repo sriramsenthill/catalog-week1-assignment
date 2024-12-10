@@ -1,0 +1,109 @@
+@use "../abstracts" as abs;
+
+.img-container {
+    overflow: hidden;
+
+    >img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.section-container {
+    max-width: 94em;
+    margin: 0 auto;
+    padding: 7.2rem var(--side-padding) 15rem;
+}
+
+.heading-underline {
+    position: relative;
+    padding: 0 2.4rem;
+    font-size: 4.8rem;
+    color: var(--clr-text-500);
+    text-align: center;
+    text-transform: uppercase;
+    text-wrap: balance;
+
+    &::before {
+        position: absolute;
+        bottom: -16px;
+        left: 0;
+        content: "";
+        height: 3px;
+        width: 16rem;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--clr-primary);
+
+        @include abs.media-query(mobile) {
+            height: 2px;
+        }
+    }
+}
+
+.input-container {
+    width: 32rem;
+    background-color: var(--clr-neutral-white);
+    font-family: var(--ff-primary);
+    font-weight: 600;
+    color: var(--clr-text-200);
+    padding: 1.6rem 1.4rem;
+    border: 2px solid var(--clr-text-100);
+    border-radius: 4px;
+
+    &::placeholder {
+        color: var(--clr-text-100);
+        font: inherit;
+    }
+}
+
+.slider {
+    margin-top: 5.6rem;
+    overflow-x: auto;
+    padding: 4rem 0 4rem var(--side-padding);
+
+    @include abs.media-query(mobile) {
+        margin-top: 3.6rem;
+        padding-right: var(--side-padding);
+    }
+
+    @include abs.media-query(desktop) {
+        padding: 4rem 0 4rem calc(var(--side-padding) + 4rem);
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.slider-wrapper {
+    display: flex;
+    gap: 5rem 4rem;
+
+    @include abs.media-query(desktop-large) {
+        justify-content: center;
+    }
+
+    @include abs.media-query(mobile) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    >* {
+        flex-shrink: 0;
+    }
+}
+
+// add this on the last item of the slider
+.slider-fix {
+    margin-right: calc(var(--side-padding) - 4rem);
+
+    @include abs.media-query(desktop) {
+        margin-right: var(--side-padding);
+    }
+
+    @include abs.media-query(mobile) {
+        margin-right: 0;
+    }
+}
