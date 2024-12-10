@@ -62,7 +62,7 @@ npm start
 
 ## Figma Design
 
-The UI has been directly inspired by the Figma design located at: [Figma Design Link]
+The UI has been directly inspired by the Figma design located at: [Figma Design Link](https://www.figma.com/design/64l0uD9YE0NVZcdAZ2YQb8/technofevers_dev?m=dev)
 
 ### Design Notes
 - Followed design system closely
