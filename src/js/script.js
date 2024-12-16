@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  const sliderWrapper = document.querySelector('.slider-wrapper-review');
+  const sliderWrapperReview = document.querySelector('.slider-wrapper');
   const nextButton = document.querySelector('.review__slider-btns button[aria-label="Slide forward"]');
   const prevButton = document.querySelector('.review__slider-btns button[aria-label="Slide back"]');
 
@@ -63,14 +63,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const nextScroll = currentScroll + cardWidth;
 
-    if (nextScroll >= sliderWrapper.scrollWidth - sliderWrapper.clientWidth) {
+    if (nextScroll >= sliderWrapperReview.scrollWidth - sliderWrapperReview.clientWidth) {
       currentScroll = 0;
-      sliderWrapper.scrollTo({
+      sliderWrapperReview.scrollTo({
         left: currentScroll,
         behavior: 'smooth'
       });
     } else {
-      sliderWrapper.scrollTo({
+      sliderWrapperReview.scrollTo({
         left: nextScroll,
         behavior: 'smooth'
       });
@@ -84,13 +84,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const prevScroll = currentScroll - cardWidth;
 
     if (prevScroll < 0) {
-      currentScroll = sliderWrapper.scrollWidth - sliderWrapper.clientWidth;
-      sliderWrapper.scrollTo({
+      currentScroll = sliderWrapperReview.scrollWidth - sliderWrapperReview.clientWidth;
+      sliderWrapperReview.scrollTo({
         left: currentScroll,
         behavior: 'smooth'
       });
     } else {
-      sliderWrapper.scrollTo({
+      sliderWrapperReview.scrollTo({
         left: prevScroll,
         behavior: 'smooth'
       });
