@@ -10,12 +10,11 @@
     }
 
     .slider-wrapper {
+        padding: 3rem;
         display: flex;
         gap: 2rem;
         overflow-x: scroll;
-        scroll-snap-type: x mandatory;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
+
 
         &::-webkit-scrollbar {
             display: none;

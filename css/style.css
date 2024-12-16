@@ -738,12 +738,10 @@ input:focus {
   overflow: hidden;
 }
 .team .slider-wrapper {
+  padding: 3rem;
   display: flex;
   gap: 2rem;
   overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
 }
 .team .slider-wrapper::-webkit-scrollbar {
   display: none;
@@ -835,6 +833,7 @@ input:focus {
   }
 }
 .review .slider-wrapper-review {
+  padding: 3rem;
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
