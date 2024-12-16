@@ -4,4 +4,22 @@
 .team {
     padding: 7.2rem 0 11rem;
     margin-top: 4.8rem;
+
+    .slider {
+        overflow: hidden;
+    }
+
+    .slider-wrapper {
+        display: flex;
+        gap: 2rem;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
 }

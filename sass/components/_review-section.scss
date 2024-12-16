@@ -71,6 +71,11 @@
                 position: relative;
                 top: 1px;
             }
+
+            &:hover {
+                cursor: pointer;
+                color: var(--clr-text-700);
+            }
         }
 
         @include abs.media-query(desktop) {

@@ -9,13 +9,16 @@
         margin-top: -8rem;
     }
 
-    // changing global utility styles
-    .slider-wrapper {
+    .slider-wrapper-review {
+        display: flex;
+        overflow-x: auto;
+        scroll-behavior: smooth;
         gap: 3rem;
 
         @include abs.media-query(mobile) {
             flex-direction: row;
         }
     }
+
 
 }
