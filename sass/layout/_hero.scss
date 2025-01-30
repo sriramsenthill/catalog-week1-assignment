@@ -4,7 +4,7 @@
     .hero {
         min-height: 58rem;
         background-image: linear-gradient(#6d535780, #6d535780),
-            url("https://s3-alpha-sig.figma.com/img/5d0f/0234/4a5201a568ff48e8c37440e3b0ea754f?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=RK736nLIcdyp9FjF5bzREIY9rn5lp3l~3tnNCV1PHr6iQX2nlZ399SnCCpQACbfqAHRL~BdOesyWtlaffNwqHmrpJK16Fol3jIPmkqaxgOPan5DMTKFOGp-2Fn36P9J4~KIX-i23fXBV1TuPIx88YImS5uR5~30umLNZgfwjaIxLBdW1-heCDF4wUVrCyVW-zkV2O-0TAQh3k3c-v7GCgi4lvP21IA7vZu7zyaEExjQmT9pZo9FeWSq6lfgUF0UeOlbKenGPKTLGDQt1pCR0FI7ouH1VFqnu6q7yMZjrBY~hsHJTmjI~yaG6-r90aqkvK5r15S8StDmu-KgpgHIRaQ__");
+            url("../assets/images/banner-hero.webp");
         background-position: center;
         background-size: cover;
         padding: 2rem;
@@ -19,5 +19,4 @@
         @include abs.media-query(mobile) {
             background-size: 350%;
         }
-
     }
